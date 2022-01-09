@@ -10,7 +10,7 @@ in this assignment, i was tasked with:
 
 here are some screenshots of my work: 
 
-<img src="./assets/images/password-generator-img-1" alt="the landing page for my password generator">
-<img src="./assets/images/password-generator-img-2" alt="an example of a randomly generatoed password">
+<img src="./assets/images/password-generator-img-1.png" alt="the landing page for my password generator">
+<img src="./assets/images/password-generator-img-2.png" alt="an example of a randomly generatoed password">
 
 you can view the deployed application here: <a href=“https://descardi-b.github.io/password-generator/“>https://descardi-b.github.io/password-generator</a>
