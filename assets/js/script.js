@@ -120,12 +120,5 @@ function generatePassword() {
     }
     // This joins the password array and converts it to a string
     var ps = password.join("");
-    UserInput(ps);
     return ps;
-}
-// This puts the password value into the textbox
-// Changed function input to use textcontent
-function UserInput(ps) {
-    document.getElementById("password").textContent = ps;
-
-}
+};
