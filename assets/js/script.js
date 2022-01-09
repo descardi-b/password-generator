@@ -7,7 +7,7 @@ var confirmUppercase;
 var confirmLowercase;
 
 // Special characters 
-character = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", " < ", "=", " > ", " ? ", "@", "[", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
+character = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"];
 
 // Numeric characters
 number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -23,15 +23,18 @@ var choices;
 
 var generateBtn = document.querySelector("#generate");
 
+// Add event listener for click, running through the 
+// generatePassword function and then placing the
+// ps variable into the html object with id "password"
 generateBtn.addEventListener("click", function () {
-    ps = generatePassword();
+    var ps = generatePassword();
     document.getElementById("password").placeholder = ps;
 });
 
 // Start function to generate password
 function generatePassword() {
     // Asks for user input
-    enter = parseInt(window.prompt("How many characters would you like your to be password? Choose a value between 8 and 128."));
+    enter = parseInt(window.prompt("How many characters would you like your password to be? Choose a value between 8 and 128."));
     // First if statement for user validation 
     if (!enter) {
         window.alert("You need to select a number!");
@@ -51,7 +54,7 @@ function generatePassword() {
 
     // Else if for 4 negative options
     if (!confirmCharacter && !confirmNumber && !confirmUppercase && !confirmLowercase) {
-        choices = window.prompt("You must choose at least one option!");
+        choices = window.alert("You must choose at least one option!");
         generatePassword();
     }
     // First if statement that uses user input prompts to determine choices
@@ -116,7 +119,6 @@ function generatePassword() {
         password.push(pickChoices);
     }
     // This joins the password array and converts it to a string
-    // Worked with a tutor to incorporate this option
     var ps = password.join("");
     UserInput(ps);
     return ps;
